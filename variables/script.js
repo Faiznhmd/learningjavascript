@@ -79,6 +79,15 @@
 // console.log(a);
 // but you can not do this with const
 
+// ---------------Hoisting------------
+var x = 7;
+function getName() {
+  console.log("Faizan");
+}
+getName();
+console.log(x);
+console.log(getName);
+
 // ------------Blocked Scope-----------
 // blocked scope combined multiple js statement in one group
 
@@ -135,7 +144,7 @@
 // console.log(c);
 // same as let
 
-//--------- lexical  block scope--------- =on side another
+//--------- lexical  block scope--------- = on side another
 // {
 //   const a = 30;
 //   {
