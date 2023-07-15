@@ -97,31 +97,91 @@
 // console.log(actors);
 
 // ------------filter--------------
-const students = [
-  {
-    name: "Student 1",
-    marks: 45,
-  },
-  {
-    name: "Student 2",
-    marks: 60,
-  },
-  {
-    name: "Student 3",
-    marks: 35,
-  },
-];
+// const students = [
+//   {
+//     name: "Student 1",
+//     marks: 45,
+//   },
+//   {
+//     name: "Student 2",
+//     marks: 60,
+//   },
+//   {
+//     name: "Student 3",
+//     marks: 35,
+//   },
+// ];
 // student ko kuch bhi likh skta hai
 
-const failed = students.filter((student) => {
-  if (student.marks < 45) {
-    return true;
-  } else {
-    return false;
-  }
-});
-console.log(failed);
+// const failed = students.filter((student) => {
+//   if (student.marks < 45) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// });
+// console.log(failed);
+
+// another method-------
+
+// const failed = students.filter((student) => {
+//   return student.marks < 45;
+// });
+// console.log(failed);
+
+// another method----
+// const failed = students.filter((student) => student.marks < 45);
+// console.log(failed);
 
 // pehele tu filter method apply kro fir for each jaisa funciton lagao fir ek variable mai band krdo
 // return true krega tu jo obj display kr rha hai wo display hoga
 // return false krega tu display kuvh nai hoga
+
+// -----------map---------- (jod deta hai)
+
+// const users = [
+//   {
+//     fname: "faizan",
+//     lname: "Ahamd",
+//   },
+//   {
+//     fname: "John",
+//     lname: "Doe",
+//   },
+// ];
+
+// user ko kuch bhi naam de skta hai
+
+// const finalusers = users.map((user) => {
+//   return {
+//     fullname: `${user.fname}${user.lname}`,
+//   };
+// });
+// console.log(finalusers);
+
+// -------------Reduce-------------
+const movies = [
+  {
+    name: "Bahubali",
+    budget: 100,
+  },
+  {
+    name: "KGF",
+    budget: 200,
+  },
+  {
+    name: "NUN",
+    budget: 200,
+  },
+];
+// let total = 0;
+// movies.forEach((movie) => {
+//   total = total + movie.budget;
+// });
+
+// another method---------
+const total = movies.reduce((acc, movie) => {
+  acc = acc + movie.budget;
+  return acc;
+}, 0);
+console.log(total);
