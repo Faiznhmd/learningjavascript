@@ -12,10 +12,16 @@
 
 // Javascript is a synchronous single thereaded language
 
-// single thereaded means = one command at a time
+// single thereaded means = one command(line) at a time
 
-// synchronous single thereaded language= one command at a time in a specific order
+// synchronous single thereaded language= one command(line) at a time in a specific order
 
+
+// --------------------how javascript code is executed------------
+
+// when we run a code a global execution context is created\
+// in the first phase  (n) have a special value undefined and the function have whole code in the memory space
+// second phase is code execution phase
 var n = 2;
 function square(num) {
   var ans = num * num;
