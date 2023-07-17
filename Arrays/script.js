@@ -10,20 +10,20 @@
 // language.push("Dart");
 // console.log(language);
 
-// 2. Add elemnet of the starting af an aaray (unshift)
-// language.unshift("faizan");
-// console.log(language);
-
-// 3. How to Kick a Element of an last of an  array(pop)
+// 2. How to Kick a Element of an last of an  array(pop)
 // language.pop();
 // console.log(language);
 
-// 4. Show only a last elemnet of an array
-// console.log(language.pop());
+// 3. Add elemnet of the starting af an aaray (unshift)
+// language.unshift("faizan");
+// console.log(language);
 
-//  5 How to kick first element of an array(shift)
+//  4. How to kick first element of an array(shift)
 // language.shift();
 // console.log(language);
+
+// 5. Show only a last elemnet of an array
+// console.log(language.pop());
 
 // -----------------loops------------------
 
@@ -70,31 +70,33 @@
 //     payment: 3000,
 //   },
 // ];
-// actors.forEach((name) => {
-//   name.payment = name.payment - 10;
+//  ji ke jagha kuch bhi likh skta hai
+
+// actors.forEach((ji) => {
+//   ji.payment = ji.payment - 10;
 // });
 // console.log(actors);
 
 // 3.------------------ For of-----------
 
-// const actors = [
-//   {
-//     name: "Faizan",
-//     payment: 1000,
-//   },
-//   {
-//     name: "Ahmad",
-//     payment: 2000,
-//   },
-//   {
-//     name: "Stack",
-//     payment: 3000,
-//   },
-// ];
-// for (let name of actors) {
-//   name.payment = name.payment - 10;
-// }
-// console.log(actors);
+const actors = [
+  {
+    name: "Faizan",
+    payment: 1000,
+  },
+  {
+    name: "Ahmad",
+    payment: 2000,
+  },
+  {
+    name: "Stack",
+    payment: 3000,
+  },
+];
+for (let name of actors) {
+  name.payment = name.payment - 10;
+}
+console.log(actors);
 
 // ------------filter--------------
 // const students = [
