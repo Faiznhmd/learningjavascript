@@ -121,12 +121,56 @@ console.log("other application work");
 
 // ----------------Promises------------------
 
+// function register() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Register end");
+//       resolve();
+//     }, 1000);
+//   });
+// }
+// function sendEmail() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Email end");
+//       resolve();
+//     }, 2000);
+//   });
+// }
+// function login() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("login end");
+//       resolve();
+//     }, 5000);
+//   });
+// }
+// function getuserData() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Got user data");
+//       resolve();
+//     }, 1000);
+//   });
+// }
+// function displayUserData() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("user data displayed");
+//       resolve();
+//     }, 1000);
+//   });
+// }
+// register().then(sendEmail).then(login).then(getuserData).then(displayUserData);
+
+// ----------- Promises REJECT------------
 function register() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
+      return reject("Error while registering...");
       console.log("Register end");
-      resolve();
-    }, 1000);
+      reject();
+    }, 2000);
   });
 }
 function sendEmail() {
@@ -161,4 +205,11 @@ function displayUserData() {
     }, 1000);
   });
 }
-register().then(sendEmail).then(login).then(getuserData).then(displayUserData);
+register()
+  .then(sendEmail)
+  .then(login)
+  .then(getuserData)
+  .then(displayUserData)
+  .catch((err) => {
+    console.log("Error: ", err);
+  });
