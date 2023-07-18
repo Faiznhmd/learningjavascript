@@ -39,3 +39,82 @@
 // firtly we console the console.log(start) and he goes to call stack and then he execute the code then he pop(nikal jata hai ) from call stack
 
 // jo function setTimeout diye the usko jab run krega tu pehle wo call stack mai jayega fir web apis mai jayega or usko jitna time diya hai wo wahi rhega fir jo uska baad jo code tha wo run ho jayega fir settimeout wala fuinction print hoga
+
+// ---------------CALL BACK--------------
+
+// scenario
+
+// Register
+// send welcome Email
+// login
+// get user data
+// display userdata
+
+// callback ke jagah kuvh bhi name ho skta hai
+
+function register(callback) {
+  setTimeout(() => {
+    console.log("Register end");
+    callback();
+  }, 1000);
+}
+function sendEmail(callback) {
+  setTimeout(() => {
+    console.log("Email end");
+    callback();
+  }, 2000);
+}
+function login(ahmad) {
+  setTimeout(() => {
+    console.log("login end");
+    ahmad();
+  }, 5000);
+}
+function getuserData() {
+  setTimeout(() => {
+    console.log("Got user data");
+  }, 1000);
+}
+function displayUserData() {
+  setTimeout(() => {
+    console.log("user data displayed");
+  }, 1000);
+}
+
+register(function () {
+  sendEmail(function () {
+    login(function () {
+      getuserData();
+      displayUserData();
+    });
+  });
+});
+
+// ab jisko jitna do wo wo pehle upper wala hoga ttu he niche run hoga jo order hai usse he run hoga
+
+console.log("other application work");
+
+// --------------practice example call back--------
+
+// function fan(gg) {
+//   setTimeout(() => {
+//     console.log("bottle");
+//     gg();
+//   }, 6000);
+// }
+
+// function book() {
+//   setTimeout(() => {
+//     console.log("page");
+//   }, 2000);
+// }
+
+// function pen() {
+//   setTimeout(() => {
+//     console.log("ink");
+//   }, 3000);
+// }
+// fan(function () {
+//   book();
+//   pen();
+// });
