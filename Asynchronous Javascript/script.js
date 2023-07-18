@@ -52,43 +52,43 @@
 
 // callback ke jagah kuvh bhi name ho skta hai
 
-function register(callback) {
-  setTimeout(() => {
-    console.log("Register end");
-    callback();
-  }, 1000);
-}
-function sendEmail(callback) {
-  setTimeout(() => {
-    console.log("Email end");
-    callback();
-  }, 2000);
-}
-function login(ahmad) {
-  setTimeout(() => {
-    console.log("login end");
-    ahmad();
-  }, 5000);
-}
-function getuserData() {
-  setTimeout(() => {
-    console.log("Got user data");
-  }, 1000);
-}
-function displayUserData() {
-  setTimeout(() => {
-    console.log("user data displayed");
-  }, 1000);
-}
+// function register(callback) {
+//   setTimeout(() => {
+//     console.log("Register end");
+//     callback();
+//   }, 1000);
+// }
+// function sendEmail(callback) {
+//   setTimeout(() => {
+//     console.log("Email end");
+//     callback();
+//   }, 2000);
+// }
+// function login(ahmad) {
+//   setTimeout(() => {
+//     console.log("login end");
+//     ahmad();
+//   }, 5000);
+// }
+// function getuserData() {
+//   setTimeout(() => {
+//     console.log("Got user data");
+//   }, 1000);
+// }
+// function displayUserData() {
+//   setTimeout(() => {
+//     console.log("user data displayed");
+//   }, 1000);
+// }
 
-register(function () {
-  sendEmail(function () {
-    login(function () {
-      getuserData();
-      displayUserData();
-    });
-  });
-});
+// register(function () {
+//   sendEmail(function () {
+//     login(function () {
+//       getuserData();
+//       displayUserData();
+//     });
+//   });
+// });
 
 // ab jisko jitna do wo wo pehle upper wala hoga ttu he niche run hoga jo order hai usse he run hoga
 
@@ -118,3 +118,47 @@ console.log("other application work");
 //   book();
 //   pen();
 // });
+
+// ----------------Promises------------------
+
+function register() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Register end");
+      resolve();
+    }, 1000);
+  });
+}
+function sendEmail() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Email end");
+      resolve();
+    }, 2000);
+  });
+}
+function login() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("login end");
+      resolve();
+    }, 5000);
+  });
+}
+function getuserData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Got user data");
+      resolve();
+    }, 1000);
+  });
+}
+function displayUserData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("user data displayed");
+      resolve();
+    }, 1000);
+  });
+}
+register().then(sendEmail).then(login).then(getuserData).then(displayUserData);
