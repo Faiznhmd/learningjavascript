@@ -53,8 +53,9 @@ function download(callback) {
 
 faiz(function () {
   run(function () {
-    login();
-    download();
+    login(function () {
+      download();
+    });
   });
 });
 console.log("hey");
