@@ -28,7 +28,7 @@
 // }
 // setTimeout(greeting, 2000);
 
-// =-----------------------event loop---------------
+// -----------------------event loop---------------
 
 //-----(call stack)= check hota hia synchronus hai ya asynchronous hai code synchronous hoga tu turant execute ho jata hai
 
