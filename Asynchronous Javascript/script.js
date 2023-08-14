@@ -164,19 +164,80 @@ console.log("other application work");
 // register().then(sendEmail).then(login).then(getuserData).then(displayUserData);
 
 // ----------- Promises REJECT------------
+// function register() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       return reject("Error while registering...");
+//       console.log("Register end");
+//       reject();
+//     }, 2000);
+//   });
+// }
+// function sendEmail() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Email end");
+//       resolve();
+//     }, 2000);
+//   });
+// }
+// function login() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("login end");
+//       resolve();
+//     }, 5000);
+//   });
+// }
+// function getuserData() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Got user data");
+//       resolve();
+//     }, 1000);
+//   });
+// }
+// function displayUserData() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("user data displayed");
+//       resolve();
+//     }, 1000);
+//   });
+// }
+// register()
+//   .then(sendEmail)
+//   .then(login)
+//   .then(getuserData)
+//   .then(displayUserData)
+//   .catch((err) => {
+//     console.log("Error: ", err);
+//   });
+
+// ------------async await---------
+
+// (aynchronous hai ya but synchronous dekhega)
+// function register() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       return reject("Error while registering...");
+//       console.log("Register end");
+//       reject();
+//     }, 2000);
+//   });
+// }
 function register() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      return reject("Error while registering...");
-      console.log("Register end");
-      reject();
+      console.log("Email end");
+      resolve();
     }, 2000);
   });
 }
 function sendEmail() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("Email end");
+      console.log("Send Email");
       resolve();
     }, 2000);
   });
@@ -186,7 +247,7 @@ function login() {
     setTimeout(() => {
       console.log("login end");
       resolve();
-    }, 5000);
+    }, 2000);
   });
 }
 function getuserData() {
@@ -205,11 +266,15 @@ function displayUserData() {
     }, 1000);
   });
 }
-register()
-  .then(sendEmail)
-  .then(login)
-  .then(getuserData)
-  .then(displayUserData)
-  .catch((err) => {
-    console.log("Error: ", err);
-  });
+
+async function authenticate() {
+  await register();
+  await sendEmail();
+  await login();
+  await getuserData();
+  await displayUserData();
+}
+
+authenticate().then(() => {
+  console.log("ALL SET!");
+});
