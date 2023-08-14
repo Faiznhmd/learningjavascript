@@ -16,7 +16,6 @@
 
 // synchronous single thereaded language= one command(line) at a time in a specific order
 
-
 // --------------------how javascript code is executed------------
 
 // when we run a code a global execution context is created\
@@ -31,7 +30,11 @@ square();
 var square2 = square(n);
 var square4 = square(4);
 
+// when memory component finish then the code component run agian and the value assign the variable
+
 // -----------Call Stack-----------
 // call stack is a stack and  every time in a bottom of a stack we have a global execution context
+
+// when ever run a program GEC pushed inside the stack and the bottom of the stack
 
 //  whenever a javascript program is run  WHOLE GEC always in bottom of a CALL STACK
