@@ -131,7 +131,7 @@ console.log(actors);
 // });
 // console.log(failed);
 
-// another method----
+// ----another method----
 // const failed = students.filter((student) => student.marks < 45);
 // console.log(failed);
 
