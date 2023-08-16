@@ -58,5 +58,30 @@
 // };
 // console.log(newuser);
 
-
 // Rest opearter--------------
+
+// ------------Destructuring----------------
+
+// bhot sari obj hai
+
+// agr koi particular cheez chahiye tu use krte hai fir pehle baar bar console.loog(user.name)
+// console.log(user.age) krna padhta hai but destuurting mai nai
+
+// const user = {
+//   name: "john doe",
+//   age: 30,
+// };
+
+// const { name, age } = user;
+// console.log(age);
+
+// destructing in array---
+
+// const data = ["Rakesh", 30, "Enigineer"];
+
+// const [name, age, profession] = data;
+// console.log(age);
+
+// name ke jgh rakesh , age ke jgh 30
+
+// kuch bhi chahiye hota hai tu uska index likhna padhta hai lekin desturcting mai ni
