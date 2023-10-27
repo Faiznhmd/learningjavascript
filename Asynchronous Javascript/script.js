@@ -1,6 +1,6 @@
 // -------------synchronous javascript--------
 
-// turant run ho jata hia synchronous js
+// turant run ho jata ha synchronous js
 // console.log("hi");
 // console.log("faizan");
 

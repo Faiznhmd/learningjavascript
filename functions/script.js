@@ -6,7 +6,7 @@
 //   console.log(`${username}  login in successfully`);
 //   console.log(password);
 // }
-// login("john", "secret");
+// login('john', 'secret');
 
 // ------------how to do uppercase-----------
 
@@ -118,20 +118,20 @@
 // -------------How function work behind the scene--------
 // same variable name so js beahve
 
-var x = 1;
-a();
-b();
-console.log(x);
+// var x = 1;
+// a();
+// b();
+// console.log(x);
 
-function a() {
-  var x = 10;
-  console.log(x);
-}
+// function a() {
+//   var x = 10;
+//   console.log(x);
+// }
 
-function b() {
-  var x = 100;
-  console.log(x);
-}
+// function b() {
+//   var x = 100;
+//   console.log(x);
+// }
 // when the control is taken in 123 line now the function is executed
 
 // when javascript run a global gobalexecution context is created

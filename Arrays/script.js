@@ -79,24 +79,24 @@
 
 // 3.------------------ For of-----------
 
-const actors = [
-  {
-    name: "Faizan",
-    payment: 1000,
-  },
-  {
-    name: "Ahmad",
-    payment: 2000,
-  },
-  {
-    name: "Stack",
-    payment: 3000,
-  },
-];
-for (let name of actors) {
-  name.payment = name.payment - 10;
-}
-console.log(actors);
+// const actors = [
+//   {
+//     name: 'Faizan',
+//     payment: 1000,
+//   },
+//   {
+//     name: 'Ahmad',
+//     payment: 2000,
+//   },
+//   {
+//     name: 'Stack',
+//     payment: 3000,
+//   },
+// ];
+// for (let name of actors) {
+//   name.payment = name.payment - 10;
+// }
+// console.log(actors);
 
 // ------------filter--------------
 // const students = [
@@ -143,12 +143,12 @@ console.log(actors);
 
 // const users = [
 //   {
-//     fname: "faizan",
-//     lname: "Ahamd",
+//     fname: 'faizan',
+//     lname: 'Ahamd',
 //   },
 //   {
-//     fname: "John",
-//     lname: "Doe",
+//     fname: 'John',
+//     lname: 'Doe',
 //   },
 // ];
 
@@ -162,28 +162,48 @@ console.log(actors);
 // console.log(finalusers);
 
 // -------------Reduce-------------
-const movies = [
-  {
-    name: "Bahubali",
-    budget: 100,
-  },
-  {
-    name: "KGF",
-    budget: 200,
-  },
-  {
-    name: "NUN",
-    budget: 200,
-  },
-];
+// const movies = [
+//   {
+//     name: 'Bahubali',
+//     budget: 100,
+//   },
+//   {
+//     name: 'KGF',
+//     budget: 200,
+//   },
+//   {
+//     name: 'NUN',
+//     budget: 200,
+//   },
+// ];
 // let total = 0;
 // movies.forEach((movie) => {
 //   total = total + movie.budget;
 // });
 
 // another method---------
-const total = movies.reduce((acc, movie) => {
-  acc = acc + movie.budget;
-  return acc;
-}, 0);
-console.log(total);
+// const total = movies.reduce((acc, movie) => {
+//   acc = acc + movie.budget;
+//   return acc;
+// }, 0);
+// console.log(total);
+
+//------------ (map function) is used to transform an array-----
+
+const users = [
+  { fristName: 'Faizan', lastname: 'Ahmad', age: 19 },
+  { fristName: 'Donald', lastname: 'Trump', age: 54 },
+  { fristName: 'John', lastname: 'Doe', age: 19 },
+  { fristName: 'Deepika', lastname: 'Raj', age: 24 },
+];
+
+// const FinalUsers = users.map((user) => {
+//   return {
+//     fullname: `${user.fristName}${user.lastname}`,
+//   };
+// });
+// console.log(FinalUsers);
+
+// ------------second method for mmap------
+// const FinalUsers = users.map((x) => x.fristName + x.lastname);
+// console.log(FinalUsers);

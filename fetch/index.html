@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="h1"></div>
+    <script>
+      const para = document.getElementById('h1');
+      const url =
+        'https://jokeapi-v2.p.rapidapi.com/joke/Any?format=json&contains=C%2523&idRange=0-150&blacklistFlags=nsfw%2Cracist';
+      const options = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key':
+            '66e1cf9595mshed14b9d1d3c154fp1d895djsnf2d1cc9a2a4a',
+          'X-RapidAPI-Host': 'jokeapi-v2.p.rapidapi.com',
+        },
+      };
+      let jokes;
+      fetch(url, options)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          jokes += `<h1 class="h1">${data?.category}<h1/>`;
+          para.innerHTML = jokes;
+        });
+    </script>
+  </body>
+</html>
