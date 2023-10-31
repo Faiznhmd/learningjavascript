@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #f6f7fb;
+  --white-color: #fff;
+  --black-color: black;
+  --red-color: #e74c3c;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--primary-color);
+}
+
+body.dark {
+  --primary-color: #242526;
+  --white-color: #18191a;
+  --black-color: white;
+  --red-color: #e74c3c;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.clock {
+  background: var(--white-color);
+  width: 400px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  display: flex;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.clock label {
+  position: absolute;
+  text-align: center;
+  inset: 20px;
+  transform: rotate(calc(var(--i) * (360deg / 12)));
+}
+.clock label span {
+  display: inline-block;
+  font-size: 30px;
+  color: black;
+  font-weight: 600;
+  transform: rotate(calc(var(--i) * (-360deg / 12)));
+}
+.container .indicater {
+  position: absolute;
+  width: 10px;
+  display: flex;
+  justify-content: center;
+  height: 10px;
+  /* background-color: red; */
+}
+.indicater ::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  border-radius: 50%;
+  background: black;
+  /* border: 4px solid red; */
+}
+
+.indicater .hand {
+  position: absolute;
+  height: 130px;
+  width: 4px;
+  bottom: 0;
+  border-radius: 25px;
+  background: red;
+  transform-origin: bottom;
+}
+.hand.min {
+  height: 120px;
+  width: 4px;
+  /* transform: rotate(45deg); */
+  background: black;
+}
+.hand.hour {
+  height: 100px;
+  /* transform: rotate(55deg); */
+  width: 8px;
+  background: black;
+}
+.mode_switch {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+}
